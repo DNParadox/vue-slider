@@ -34,11 +34,16 @@ var app = new Vue ({
          },
     methods : 
             {   
+                setActiveElement(thumbIndex) {
+                    // this.currentActiveElement uguale all'indice dell'elemento su cui ho cliccato
+                    this.currentActiveElement = thumbIndex;
+                },
+               
                 prevImage( ) {
                     if (this.imageToShow  > 0 ) {
                         this.imageToShow --;
                     } else {
-                        this.imageToShow  = this.slide.length - 1 ;
+                        this.imageToShow  = this.slide.length - 1;
                     }
 
                 },

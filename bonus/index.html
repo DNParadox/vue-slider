@@ -26,11 +26,11 @@
                     </div>
                 </div>
 
-                <div  class="thumbs">
+                <div class="thumbs">
                     <div @click="prevImage" class="prev"></div>
                     <div @click="nextImage" class="next"></div>
-                    <div v-for="(element, index) in slide" :class="{'active' : index === imageToShow}" class="thumb">
-                        <img :src="element.image" alt="Svezia"/>
+                    <div v-for="element, index in slide"   v-for="(element, index) in slide" :class="{'active' : index === imageToShow}" class="thumb">
+                        <img @click="setActiveElement(index)":src="element.image" :alt="slide[imageToShow].title"/>
                     </div>
                 </div>
 
